@@ -10,6 +10,7 @@ export default class Slides extends Component {
   }
   componentDidMount(){
     this.clickFullScreen();
+    
 
   }
 
