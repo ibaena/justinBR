@@ -10,6 +10,7 @@ export default class Slides extends Component {
   }
   componentDidMount(){
     this.clickFullScreen();
+
   }
 
   clickFullScreen() {
@@ -22,6 +23,7 @@ export default class Slides extends Component {
       //TweenMax.to(currentSel, .4, {width:'0%', ease:Cubic.easeInOut}, .1);
 
       if(fireFullScreen) {
+        $('#tv-frame').animate({scrollLeft: $('#tv-frame').offset().left}, 800);
         currentSel.css({
           'position': 'absolute',
           'top': '50%',
