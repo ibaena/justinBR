@@ -1,0 +1,49 @@
+/************************
+    TV Frame Styles
+*************************/
+#tv-frame {
+    padding: 0;
+    overflow: hidden;
+
+    .tvScreen {
+        height: 100vh;
+        padding: 0;
+        background: black;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        #slide-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+
+            .single-slides {
+                height: 400px;
+                width: 600px;
+                background: white;
+                margin: 1em;
+                position: absolute;
+            }
+            .single-slides:first-child {
+                left:0;
+            }
+            .single-slides:nth-child(2) {
+                left:40%;
+            }
+            .single-slides:nth-child(3) {
+                left:80%;
+            }
+            .single-slides:nth-child(4) {
+                left:120%;
+            }
+        }
+    }
+
+    .tvControls {
+        height: 100vh;
+        padding: 0;
+        background:purple;
+    }
+}
