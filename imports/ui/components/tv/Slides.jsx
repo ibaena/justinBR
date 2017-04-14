@@ -34,65 +34,91 @@ export default class Slides extends Component {
           'padding': '0',
           'margin': '0',
           'transition': 'all .6s ease-in-out',
-          'z-index':'10'
+          'z-index':'10',
         })
+        setTimeout(function() {
+          $('#slide-wrapper').css({
+            'position':'fixed',
+          })
+        },400)
       } else {
+        $('#slide-wrapper').css({
+          'position':'inherit'
+        })
         switch (currentId) {
           case 'slide-1':
           currentSel.css({
             'position': 'absolute',
-            'top': 'inherit',
+            'top': '50%',
             'left': '0',
-            'transform': 'inherit',
+            'transform': 'translate(0%, -50%)',
             'height': '400px',
             'width': '600px',
             'padding': '0',
-            'margin': '1em',
+            'margin': '0',
             'transition': 'all .6s ease-in-out',
-            'z-index':'0'
           })
+          setTimeout(function() {
+            currentSel.css({
+              'z-index':'0',
+            })
+          },600)
+
             break;
             case 'slide-2':
             currentSel.css({
               'position': 'absolute',
-              'top': 'inherit',
+              'top': '50%',
               'left': '40%',
-              'transform': 'inherit',
+              'transform': 'translate(0%, -50%)',
               'height': '400px',
               'width': '600px',
               'padding': '0',
-              'margin': '1em',
+              'margin': '0',
               'transition': 'all .6s ease-in-out',
-              'z-index':'0'
             })
+            setTimeout(function() {
+              currentSel.css({
+                'z-index':'0',
+              })
+            },600)
               break;
               case 'slide-3':
               currentSel.css({
                 'position': 'absolute',
-                'top': 'inherit',
+                'top': '50%',
                 'left': '80%',
-                'transform': 'inherit',
+                'transform': 'translate(0%, -50%)',
                 'height': '400px',
                 'width': '600px',
                 'padding': '0',
-                'margin': '1em',
+                'margin': '0',
                 'transition': 'all .6s ease-in-out',
-                'z-index':'0'
               })
+              setTimeout(function() {
+                currentSel.css({
+                  'z-index':'0',
+                })
+              },600)
                 break;
                 case 'slide-4':
                 currentSel.css({
                   'position': 'absolute',
-                  'top': 'inherit',
+                  'top': '50%',
                   'left': '120%',
-                  'transform': 'inherit',
+                  'transform': 'translate(0%, -50%)',
                   'height': '400px',
                   'width': '600px',
                   'padding': '0',
-                  'margin': '1em',
+                  'margin': '0',
                   'transition': 'all .6s ease-in-out',
-                  'z-index':'0'
                 })
+                setTimeout(function() {
+                  currentSel.css({
+                    'z-index':'0',
+                    'transition':'all .4s ease-in-out'
+                  })
+                },600)
                   break;
           default:
 
