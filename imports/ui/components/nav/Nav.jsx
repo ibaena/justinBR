@@ -64,7 +64,7 @@ export default class Nav extends Component {
             <i className="fa fa-superpowers rotate-menu" aria-hidden="true"></i>
           </div>
           <div id="sidebar-btn">
-            <i className="fa fa-xing" aria-hidden="true"></i>
+            <i className="fa fa-xing rotate-sidebar" aria-hidden="true"></i>
           </div>
         </div>
         <div className="video-items col-sm-12 fade-out">

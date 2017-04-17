@@ -5,11 +5,19 @@
 .sidebar-section {
   height: 100vh;
   background:purple;
-  position: absolute;
+  position: fixed;
   right:0;
   z-index: 1;
   transition: all .4s ease-in-out;
   padding:0;
   width:0%;
   visibility: hidden;
+
+  .media-item {
+    height: 33.33333vh;
+    padding: 0;
+  }
+  .media-item:first-child {
+    background: green;
+  }
 }
