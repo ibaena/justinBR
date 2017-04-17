@@ -37,9 +37,11 @@ setTimeout(function() {
             </div>
           </div>
 
-          <video loop muted autoPlay   className="fullscreen-bg__video" id="home-video">
-            <source src="videos/demoReel.mp4" type="video/mp4" />
+          <div className="video-wrapper">
+          <video loop muted autoPlay   preload="none" className="fullscreen-bg__video embed-responsive-item" id="home-video">
+            <source src="videos/demoReel-cut.mp4" type="video/mp4" />
           </video>
+          </div>
         </div>
 
         <White />
