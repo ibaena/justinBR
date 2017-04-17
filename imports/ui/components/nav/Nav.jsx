@@ -24,7 +24,12 @@ export default class Nav extends Component {
           'opacity':'0',
           'transition':'all .3s ease-in-out'
         });
-          $('#home-page').toggleClass('home-page overflow-hide')
+          $('#home-page').toggleClass('home-page overflow-hide');
+          $('.rotate-menu').css({
+            'transform': 'rotate(90deg)',
+            'transition': 'all .3s ease-in-out'
+          })
+
 
       }else {
         $('.nav-wrapper').css({
@@ -38,7 +43,11 @@ export default class Nav extends Component {
           'opacity':'1',
           'transition':'all .3s ease-in-out'
         });
-        $('#home-page').toggleClass('overflow-hide home-page')
+        $('#home-page').toggleClass('overflow-hide home-page');
+        $('.rotate-menu').css({
+          'transform': 'rotate(0deg)',
+          'transition': 'all .3s ease-in-out'
+        })
       }
     })
   }
@@ -52,7 +61,7 @@ export default class Nav extends Component {
         </div>
         <div className="nav-items">
           <div id="menu-btn">
-            <i className="fa fa-superpowers" aria-hidden="true"></i>
+            <i className="fa fa-superpowers rotate-menu" aria-hidden="true"></i>
           </div>
           <div id="sidebar-btn">
             <i className="fa fa-xing" aria-hidden="true"></i>

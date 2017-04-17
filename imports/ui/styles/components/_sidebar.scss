@@ -1,0 +1,15 @@
+/************************
+    Sidebar Styles
+************************/
+
+.sidebar-section {
+  height: 100vh;
+  background:purple;
+  position: absolute;
+  right:0;
+  z-index: 1;
+  transition: all .4s ease-in-out;
+  padding:0;
+  width:0%;
+  visibility: hidden;
+}
