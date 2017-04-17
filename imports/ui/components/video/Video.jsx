@@ -28,12 +28,20 @@ setTimeout(function() {
   render() {
     return (
       <div id="home-page" className="home-page" >
-  <Nav />
+        <Nav />
         <div className="fullscreen-bg" >
+        <div className="video-items col-sm-12 fade-out">
         <div className="branding">
           JUSTIN SCHILLING.
         </div>
-        <div className="video-items col-sm-12 fade-out">
+        <div className="nav-items">
+          <div id="menu-btn">
+            <i className="fa fa-superpowers rotate-menu" aria-hidden="true"></i>
+          </div>
+          <div id="sidebar-btn">
+            <i className="fa fa-xing rotate-sidebar" aria-hidden="true"></i>
+          </div>
+        </div>
           <div id="btm-left-video">
           <p>
             <i className="fa fa-headphones" aria-hidden="true"></i>

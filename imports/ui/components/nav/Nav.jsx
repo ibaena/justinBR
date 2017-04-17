@@ -12,6 +12,7 @@ export default class Nav extends Component {
   componentDidMount(){
     let triggerMenu= false;
     $('#menu-btn').on('click', function() {
+
       triggerMenu = !triggerMenu;
 
       if(triggerMenu) {
@@ -30,7 +31,7 @@ export default class Nav extends Component {
           $('.rotate-menu').css({
             'transform': 'rotate(90deg)',
             'transition': 'all .3s ease-in-out'
-          })
+          });
 
 
       }else {
@@ -59,11 +60,6 @@ export default class Nav extends Component {
     return (
       <div id="nav" className="container-fluid">
 
-        <nav className="nav-wrapper">
-          <div className="col-md-12 col-sm-12">
-            NAV
-          </div>
-        </nav>
       </div>
     );
   }
