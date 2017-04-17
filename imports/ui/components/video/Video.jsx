@@ -14,7 +14,7 @@ export default class Video extends Component {
 
   }
   componentDidMount(){
-Scrollbar.init(document.getElementById('home-page'),{
+Scrollbar.init(document.querySelector('.home-page'),{
   'speed': '2.2',
 });
 
@@ -26,12 +26,12 @@ setTimeout(function() {
 
   render() {
     return (
-      <div id="home-page" >
+      <div id="home-page" className="home-page" >
         <div className="fullscreen-bg" >
 
           <div className="video-overlay">
             <Nav />
-            <div className="hvr-box">
+            <div className="hvr-box fade-out">
               <h1 className="video-header-text">JS</h1>
               <h1 className="video-header-text-small">It is a long established fact that a reader will be distracted </h1>
             </div>

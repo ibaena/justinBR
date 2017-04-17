@@ -19,11 +19,13 @@ export default class Nav extends Component {
           'opacity':'1',
           'visibility':'visible'
         });
-        $('.hvr-box').css({
+        $('.fade-out').css({
           'visibility':'hidden',
           'opacity':'0',
           'transition':'all .3s ease-in-out'
         });
+          $('#home-page').toggleClass('home-page overflow-hide')
+
       }else {
         $('.nav-wrapper').css({
           'width':'0%',
@@ -31,11 +33,12 @@ export default class Nav extends Component {
           'opacity':'0',
           'visibility':'hidden'
         });
-        $('.hvr-box').css({
+        $('.fade-out').css({
           'visibility':'visible',
           'opacity':'1',
           'transition':'all .3s ease-in-out'
         });
+        $('#home-page').toggleClass('overflow-hide home-page')
       }
     })
   }
@@ -55,7 +58,7 @@ export default class Nav extends Component {
             <i className="fa fa-xing" aria-hidden="true"></i>
           </div>
         </div>
-        <div className="video-items col-sm-12">
+        <div className="video-items col-sm-12 fade-out">
           <div id="btm-left-video">
           <p>
             <i className="fa fa-headphones" aria-hidden="true"></i>
