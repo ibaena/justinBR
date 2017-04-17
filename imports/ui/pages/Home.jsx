@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
+import Scrollbar from 'smooth-scrollbar';
 
-import TvFrame from '../../ui/components/tv/TvFrame.jsx';
+import Nav from '../../ui/components/nav/Nav.jsx';
+import Video from '../../ui/components/video/Video.jsx';
 
-// This component - represents a single page
+
+
+
+
 export const Home = () =>
 
+
 <div>
-  <div id="home" className="desktop-sites">
-    <TvFrame />
+  <div id="home" className="desktop-sites container-fluid"  >
+    <Video />
   </div>
 </div>
