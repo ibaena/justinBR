@@ -9,7 +9,7 @@ export default class Nav extends Component {
   }
   componentDidMount(){
     let triggerMenu= false;
-    $('.nav-items').on('click', function() {
+    $('#menu-btn').on('click', function() {
       triggerMenu = !triggerMenu;
 
       if(triggerMenu) {
@@ -48,7 +48,26 @@ export default class Nav extends Component {
           JUSTIN SCHILLING.
         </div>
         <div className="nav-items">
-          Nav Items
+          <div id="menu-btn">
+            <i className="fa fa-superpowers" aria-hidden="true"></i>
+          </div>
+          <div id="sidebar-btn">
+            <i className="fa fa-xing" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div className="video-items col-sm-12">
+          <div id="btm-left-video">
+          <p>
+            <i className="fa fa-headphones" aria-hidden="true"></i>
+            <b> Watching:</b> <span className="grey-text"> Justin Schilling 2017 Reel</span>
+          </p>
+          </div>
+          <div id="btm-right-video">
+            <p>
+              <i className="fa fa-arrow-down" aria-hidden="true"></i>
+              <b>Scroll</b> <span className="grey-text">to continue</span>
+            </p>
+          </div>
         </div>
         <nav className="nav-wrapper">
           <div className="col-md-12 col-sm-12">
