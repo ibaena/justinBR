@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {TweenMax, Power2, TimelineLite} from "gsap";
 
+
 // TvFrame component
 export default class Sidebar extends Component {
   // Note: In ES6, constructor() === componentWillMount() in React ES5
@@ -43,7 +44,7 @@ export default class Sidebar extends Component {
   render() {
     return (
         <div className=" sidebar-section" >
-          <div className="container">
+          <div className="container no-padding">
             <div className="col-sm-12 media-item"></div>
             <div className="col-sm-12 media-item"></div>
             <div className="col-sm-12 media-item"></div>

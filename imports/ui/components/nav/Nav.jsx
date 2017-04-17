@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+
+
 // Nav component
 export default class Nav extends Component {
   // Note: In ES6, constructor() === componentWillMount() in React ES5
@@ -59,14 +61,7 @@ export default class Nav extends Component {
         <div className="branding">
           JUSTIN SCHILLING.
         </div>
-        <div className="nav-items">
-          <div id="menu-btn">
-            <i className="fa fa-superpowers rotate-menu" aria-hidden="true"></i>
-          </div>
-          <div id="sidebar-btn">
-            <i className="fa fa-xing rotate-sidebar" aria-hidden="true"></i>
-          </div>
-        </div>
+
         <div className="video-items col-sm-12 fade-out">
           <div id="btm-left-video">
           <p>

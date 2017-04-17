@@ -1,23 +1,40 @@
 /************************
     Sidebar Styles
 ************************/
-
 .sidebar-section {
-  height: 100vh;
-  background:purple;
-  position: fixed;
-  right:0;
-  z-index: 1;
-  transition: all .4s ease-in-out;
-  padding:0;
-  width:0%;
-  visibility: hidden;
-
-  .media-item {
-    height: 33.33333vh;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    z-index: 1;
+    transition: all 0.4s ease-in-out;
     padding: 0;
-  }
-  .media-item:first-child {
-    background: green;
-  }
+    width: 0;
+    visibility: hidden;
+
+    .no-padding {
+        padding: 0;
+        overflow: auto;
+        height: 100vh;
+    }
+
+    .media-item {
+        height: 33.33333vh;
+        padding: 0;
+    }
+
+    .media-item:first-child {
+        background: green;
+    }
+
+    .media-item:nth-child(2) {
+        background: blue;
+    }
+
+    .media-item:nth-child(3) {
+        background: gray;
+    }
+
+    .media-item:nth-child(4) {
+        background: yellow;
+    }
 }

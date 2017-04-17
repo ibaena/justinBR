@@ -8,7 +8,7 @@
     width: 100%;
     height: 100vh;
     padding: 0;
-    z-index: 1;
+    z-index: 2;
 
     .branding {
         position: absolute;
@@ -19,28 +19,7 @@
         font-weight: 200px;
     }
 
-    .nav-items {
-        position: absolute;
-        right: 2em;
-        top: 12px;
-        z-index: 999;
-        font-size: 1.5em;
-        display: flex;
 
-        #menu-btn {
-            i {
-                padding: 0 0.5em;
-                cursor: pointer;
-            }
-        }
-
-        #sidebar-btn {
-            i {
-                cursor: pointer;
-                padding: 0 0.5em;
-            }
-        }
-    }
 
     .video-items {
         position: absolute;
@@ -97,4 +76,28 @@
 .grey-text:hover {
     color:white;
     transition: all .2s ease-in-out;
+}
+.nav-items {
+    position: absolute;
+    right: 2em;
+    top: 12px;
+    z-index: 999;
+    font-size: 1.5em;
+    display: flex;
+
+    #menu-btn {
+        i {
+            padding: 0 0.5em;
+            cursor: pointer;
+            color:white;
+        }
+    }
+
+    #sidebar-btn {
+        i {
+            cursor: pointer;
+            padding: 0 0.5em;
+            color:white;
+        }
+    }
 }

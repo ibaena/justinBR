@@ -5,7 +5,7 @@ import Scrollbar from 'smooth-scrollbar';
 import White from '../section/White.jsx';
 import Black from '../section/Black.jsx';
 import Nav from '../nav/Nav.jsx';
-import Sidebar from '../sidebar/Sidebar.jsx';
+
 
 // TvFrame component
 export default class Video extends Component {
@@ -28,11 +28,11 @@ setTimeout(function() {
   render() {
     return (
       <div id="home-page" className="home-page" >
-      <Sidebar />
+  <Nav />
         <div className="fullscreen-bg" >
 
           <div className="video-overlay">
-            <Nav />
+
             <div className="hvr-box fade-out">
               <h1 className="video-header-text">JS.</h1>
               <h1 className="video-header-text-small">It is a long established fact that a reader will be distracted </h1>
