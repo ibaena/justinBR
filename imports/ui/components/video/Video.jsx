@@ -25,9 +25,38 @@ export default class Video extends Component {
       let scrollPos = true;
       let whiteSection = scrollbar.isVisible(document.querySelector('.white-section'));
       let blackSection = scrollbar.isVisible(document.querySelector('.black-section'));
-console.log(scrollbar.scrollTop);
+
       let turnBlack = 900;
+      let btmNav = 30;
       let currentPos = scrollbar.scrollTop;
+
+        if(btmNav < currentPos) {
+          $('#btm-left-video').css({
+            'left':'1em',
+            'opacity':'0',
+            'visibility':'hidden',
+            'transition':'all .3s ease-in-out'
+          });
+          $('#btm-right-video').css({
+            'right':'1em',
+            'opacity':'0',
+            'visibility':'hidden',
+            'transition':'all .3s ease-in-out'
+          });
+        }else{
+          $('#btm-left-video').css({
+            'left':'4em',
+            'opacity':'1',
+            'visibility':'visible',
+            'transition':'all .3s ease-in-out'
+          });
+          $('#btm-right-video').css({
+            'right':'4em',
+            'opacity':'1',
+            'visibility':'visible',
+            'transition':'all .3s ease-in-out'
+          });
+        }
 
       if(turnBlack < currentPos) {
         $('#menu-btn i').css({
