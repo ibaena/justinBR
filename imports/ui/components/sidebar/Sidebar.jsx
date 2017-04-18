@@ -59,8 +59,8 @@ export default class Sidebar extends Component {
   renderVids() {
     return this.ytVids().map((item) => (
       <div className="col-sm-12 media-item" key={item._id}>
-        <div className="embed-responsive embed-responsive-16by9">
-          <iframe className="embed-responsive-item" src={item.src}></iframe>
+        <div className="">
+          <iframe className="cs-iframe" src={item.src}></iframe>
         </div>
       </div>
     ))
@@ -70,6 +70,9 @@ export default class Sidebar extends Component {
     return (
         <div className=" sidebar-section" >
           <div className="container no-padding">
+          <div className="col-sm-12 media-item">
+            <h2 className="sidebar-header center-text">MEDIA</h2>
+          </div>
             {this.renderVids()}
           </div>
         </div>

@@ -18,23 +18,26 @@
     }
 
     .media-item {
-        height: 33.33333vh;
+        height: 300px;
         padding: 0;
     }
 
     .media-item:first-child {
-        background: green;
+        background: black;
+        color:white;
     }
 
-    .media-item:nth-child(2) {
-        background: blue;
-    }
 
-    .media-item:nth-child(3) {
-        background: gray;
-    }
+}
+.sidebar-header {
+    position: absolute;
+bottom: 2em;
+}
 
-    .media-item:nth-child(4) {
-        background: yellow;
-    }
+.cs-iframe {
+    width:400px !important;
+    height:300px !important;
+}
+iframe {
+    border:none;
 }
