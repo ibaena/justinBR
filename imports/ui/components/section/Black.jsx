@@ -16,7 +16,9 @@ export default class Black extends Component {
   render() {
     return (
         <div className="col-md-12 col-sm-12 black-section" id="black">
-          <h1>Black</h1>
+          <div className="border-box">
+            <p className="black-text">Ideas? Questions? Just want to chat? <a href="" className="underline-effect no-decor">Click Here.</a></p>
+          </div>
         </div>
     );
   }

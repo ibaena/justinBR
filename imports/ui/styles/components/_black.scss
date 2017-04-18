@@ -1,9 +1,75 @@
 /******************
     White Section
 *******************/
-
 .black-section {
-  background: black;
-  color:white;
-min-height: 50vh;
+    background: black;
+    color: white;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .border-box {
+        border: 1px solid white;
+        width: 60%;
+        padding: 1em;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+
+        .black-text {
+            font-size: calc(3em  + 4px);
+            text-align: center;
+            font-weight: 300;
+        }
+    }
+}
+
+.no-decor {
+    text-decoration: none;
+    color:white;
+}
+.no-decor:hover {
+    text-decoration: none;
+    color:white;
+}
+.underline-effect {
+  text-decoration: none;
+  color: white;
+  transition: .3s all linear;
+  position: relative;
+  padding: .1em 0;
+  &:before, &:after {
+    content: "";
+    height: 1px;
+    width: 0%;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    transition: .2s all linear;
+  }
+  &:before {
+    left: 50%;
+  }
+  &:after {
+    right: 50%;
+  }
+
+  &:hover {
+    color: white;
+    &:before, &:after {
+      width: 100%;
+    }
+     &:before {
+      left: 0%;
+    }
+    &:after {
+      right: 0%;
+    }
+  }
+  &:active, &:focus {
+    color: darken(white, 10%);
+    &:before, &:after {
+      background: darken(white, 10%);
+    }
+  }
 }
