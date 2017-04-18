@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {TweenMax, Power2, TimelineLite} from "gsap";
+import Scrollbar from 'smooth-scrollbar';
 
 
 // TvFrame component
@@ -9,7 +10,16 @@ export default class Sidebar extends Component {
     super();
 
   }
+
+  sideScrollbar(){
+      var sidebarScroll = Scrollbar.init(document.querySelector('.'),{
+       'speed': '2.2',
+       'overscrollEffect':'bounce',
+       'damping':'.05'
+     });
+  }
   componentDidMount(){
+
     let triggerSidebar= false;
     $('#sidebar-btn').on('click', function() {
       triggerSidebar = !triggerSidebar;
@@ -19,7 +29,7 @@ export default class Sidebar extends Component {
         $('.sidebar-section').css({
           'visibility':'visible',
           'transition':'all .3s ease-in-out',
-          'width':'400px'
+          'width':'450px'
         });
         $('.rotate-sidebar').css({
           'transform': 'rotate(90deg)',
@@ -50,17 +60,17 @@ export default class Sidebar extends Component {
 
   ytVids() {
     return [
-      {_id:1, src:'https://www.youtube.com/embed/nz73OSS9h1I'},
-      {_id:2, src:'https://www.youtube.com/embed/e1GSwjLoieM'},
-      {_id:3, src:'https://www.youtube.com/embed/OPqSt51kimA'},
-      {_id:4, src:'https://www.youtube.com/embed/feufY7NFbPo'},
+      {_id:1, src:'https://www.youtube.com/embed/nz73OSS9h1I?modestbranding=1&autohide=1&showinfo=0&controls=0'},
+      {_id:2, src:'https://www.youtube.com/embed/e1GSwjLoieM?modestbranding=1&autohide=1&showinfo=0&controls=0'},
+      {_id:3, src:'https://www.youtube.com/embed/OPqSt51kimA?modestbranding=1&autohide=1&showinfo=0&controls=0'},
+      {_id:4, src:'https://www.youtube.com/embed/feufY7NFbPo?modestbranding=1&autohide=1&showinfo=0&controls=0'},
     ]
   }
   renderVids() {
     return this.ytVids().map((item) => (
       <div className="col-sm-12 media-item" key={item._id}>
         <div className="">
-          <iframe className="cs-iframe" src={item.src}></iframe>
+          <iframe className="cs-iframe" src={item.src} allowTransparency="true" style={{background: '#ffffff' }}></iframe>
         </div>
       </div>
     ))
