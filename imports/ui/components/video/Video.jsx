@@ -14,21 +14,48 @@ export default class Video extends Component {
     super();
 
   }
-  componentDidMount(){
-     var scrollbar = Scrollbar.init(document.querySelector('.home-page'),{
-      'speed': '2.2',
-      'overscrollEffect':'bounce',
-      'damping':'.05'
-    });
+  scrollBarInstance() {
+    var scrollbar = Scrollbar.init(document.querySelector('.home-page'),{
+     'speed': '2.2',
+     'overscrollEffect':'bounce',
+     'damping':'.05'
+   });
 
-    setTimeout(function() {
-      $('#home-video').get(0).play()
-    }, 300)
     scrollbar.addListener(function() {
       let scrollPos = true;
       let whiteSection = scrollbar.isVisible(document.querySelector('.white-section'));
       let blackSection = scrollbar.isVisible(document.querySelector('.black-section'));
 
+      let turnBlack = 1000;
+      let currentPos = scrollbar.scrollTop;
+
+      if(turnBlack < currentPos) {
+        $('#menu-btn i').css({
+          'color':'black',
+          'transition':'all .3s ease-in-out'
+        });
+        $('#sidebar-btn i').css({
+          'color':'black',
+          'transition':'all .3s ease-in-out'
+        });
+        $('.branding').css({
+          'color':'black',
+          'transition':'all .3s ease-in-out'
+        });
+      }else {
+        $('#menu-btn i').css({
+          'color':'white',
+          'transition':'all .3s ease-in-out'
+        });
+        $('#sidebar-btn i').css({
+          'color':'white',
+          'transition':'all .3s ease-in-out'
+        });
+        $('.branding').css({
+          'color':'white',
+          'transition':'all .3s ease-in-out'
+        });
+      }
 
       switch(scrollPos) {
         case whiteSection:
@@ -43,6 +70,14 @@ export default class Video extends Component {
       }
 
     });
+  }
+  componentDidMount(){
+    this.scrollBarInstance();
+
+    setTimeout(function() {
+      $('#home-video').get(0).play()
+    }, 300)
+
 }
 
 
