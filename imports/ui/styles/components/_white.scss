@@ -3,7 +3,7 @@
 *******************/
 .white-section {
     background: white;
-    min-height: 50vh;
+    padding: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,10 +11,11 @@
     #white-header {
         text-align: center;
         position: relative;
-        bottom:1.5em;
-        right:4em;
+        bottom: 1.5em;
+        right: 4em;
         font-size: calc(3em + 8px);
     }
+
     #white-paragraph {
         float: left;
         width: 600px;

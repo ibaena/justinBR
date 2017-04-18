@@ -4,20 +4,20 @@
 .black-section {
     background: black;
     color: white;
-    min-height: 50vh;
+    padding: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
 
     .border-box {
         border: 1px solid white;
-        width: 60%;
+        width: 70%;
         padding: 1em;
         border-top-left-radius: 70px;
         border-bottom-left-radius: 70px;
 
         .black-text {
-            font-size: calc(3em  + 2px);
+            font-size: calc(2.8em  + 2px);
             text-align: center;
             font-weight: 300;
         }

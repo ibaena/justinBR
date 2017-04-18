@@ -25,8 +25,8 @@ export default class Video extends Component {
       let scrollPos = true;
       let whiteSection = scrollbar.isVisible(document.querySelector('.white-section'));
       let blackSection = scrollbar.isVisible(document.querySelector('.black-section'));
-
-      let turnBlack = 1000;
+console.log(scrollbar.scrollTop);
+      let turnBlack = 900;
       let currentPos = scrollbar.scrollTop;
 
       if(turnBlack < currentPos) {
