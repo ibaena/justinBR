@@ -19,7 +19,7 @@ export default class Sidebar extends Component {
         $('.sidebar-section').css({
           'visibility':'visible',
           'transition':'all .3s ease-in-out',
-          'width':'25%'
+          'width':'400px'
         });
         $('.rotate-sidebar').css({
           'transform': 'rotate(90deg)',
@@ -29,7 +29,7 @@ export default class Sidebar extends Component {
         $('.sidebar-section').css({
           'visibility':'hidden',
           'transition':'all .3s ease-in-out',
-          'width':'1%'
+          'width':'1px'
         });
         $('.rotate-sidebar').css({
           'transform': 'rotate(0deg)',
@@ -40,15 +40,29 @@ export default class Sidebar extends Component {
     })
   }
 
+  ytVids() {
+    return [
+      {_id:1, src:'https://www.youtube.com/embed/nz73OSS9h1I'},
+      {_id:2, src:'https://www.youtube.com/embed/e1GSwjLoieM'},
+      {_id:3, src:'https://www.youtube.com/embed/OPqSt51kimA'},
+      {_id:4, src:'https://www.youtube.com/embed/feufY7NFbPo'},
+    ]
+  }
+  renderVids() {
+    return this.ytVids().map((item) => (
+      <div className="col-sm-12 media-item" key={item._id}>
+        <div className="embed-responsive embed-responsive-16by9">
+          <iframe className="embed-responsive-item" src={item.src}></iframe>
+        </div>
+      </div>
+    ))
+  }
 
   render() {
     return (
         <div className=" sidebar-section" >
           <div className="container no-padding">
-            <div className="col-sm-12 media-item"></div>
-            <div className="col-sm-12 media-item"></div>
-            <div className="col-sm-12 media-item"></div>
-            <div className="col-sm-12 media-item"></div>
+            {this.renderVids()}
           </div>
         </div>
     );

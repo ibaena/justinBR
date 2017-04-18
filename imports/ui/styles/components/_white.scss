@@ -1,8 +1,25 @@
 /******************
     White Section
 *******************/
-
 .white-section {
-  background: white;
-min-height: 50vh;
+    background: white;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #white-header {
+        text-align: center;
+        position: relative;
+        bottom:1.5em;
+        right:4em;
+        font-size: calc(3em + 8px);
+    }
+    #white-paragraph {
+        float: left;
+        width: 600px;
+        font-size: calc(1em + 4px);
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
 }
