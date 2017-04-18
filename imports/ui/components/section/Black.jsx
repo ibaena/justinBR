@@ -15,8 +15,8 @@ export default class Black extends Component {
 
   render() {
     return (
-        <div className="col-md-12 col-sm-12 black-section" >
-          <h1>White</h1>
+        <div className="col-md-12 col-sm-12 black-section" id="black">
+          <h1>Black</h1>
         </div>
     );
   }

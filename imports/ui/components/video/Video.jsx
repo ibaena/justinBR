@@ -15,48 +15,44 @@ export default class Video extends Component {
 
   }
   componentDidMount(){
-Scrollbar.init(document.querySelector('.home-page'),{
-  'speed': '2.2',
-});
+     var scrollbar = Scrollbar.init(document.querySelector('.home-page'),{
+      'speed': '2.2',
+      'overscrollEffect':'bounce',
+      'damping':'.05'
+    });
 
-setTimeout(function() {
-  $('#home-video').get(0).play()
-}, 300)
-  }
+    setTimeout(function() {
+      $('#home-video').get(0).play()
+    }, 300)
+    scrollbar.addListener(function() {
+      let scrollPos = true;
+      let whiteSection = scrollbar.isVisible(document.querySelector('.white-section'));
+      let blackSection = scrollbar.isVisible(document.querySelector('.black-section'));
+
+
+      switch(scrollPos) {
+        case whiteSection:
+          console.log('White:', whiteSection);
+
+        break;
+        case blackSection:
+          console.log('Black:', blackSection);
+
+        break;
+
+      }
+
+    });
+}
 
 
   render() {
     return (
       <div id="home-page" className="home-page" >
-        <Nav />
-        <div className="fullscreen-bg" >
-        <div className="video-items col-sm-12 fade-out">
-        <div className="branding">
-          JUSTIN SCHILLING.
-        </div>
-        <div className="nav-items">
-          <div id="menu-btn">
-            <i className="fa fa-superpowers rotate-menu" aria-hidden="true"></i>
-          </div>
-          <div id="sidebar-btn">
-            <i className="fa fa-xing rotate-sidebar" aria-hidden="true"></i>
-          </div>
-        </div>
-          <div id="btm-left-video">
-          <p>
-            <i className="fa fa-headphones" aria-hidden="true"></i>
-            <b> Watching:</b> <span className="grey-text"> Justin Schilling 2017 Reel</span>
-          </p>
-          </div>
-          <div id="btm-right-video">
-            <p>
-              <i className="fa fa-arrow-down" aria-hidden="true"></i>
-              <b>Scroll</b> <span className="grey-text">to continue</span>
-            </p>
-          </div>
-        </div>
-          <div className="video-overlay">
 
+        <div className="fullscreen-bg" >
+
+          <div className="video-overlay">
             <div className="hvr-box fade-out">
               <h1 className="video-header-text">JS.</h1>
               <h1 className="video-header-text-small">It is a long established fact that a reader will be distracted </h1>

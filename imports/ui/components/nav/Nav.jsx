@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-
+import Icons from './Icons.jsx';
+import NavWrapper from './NavWrapper.jsx';
 
 // Nav component
 export default class Nav extends Component {
@@ -59,7 +60,7 @@ export default class Nav extends Component {
   render() {
     return (
       <div id="nav" className="container-fluid">
-
+      <Icons />
       </div>
     );
   }

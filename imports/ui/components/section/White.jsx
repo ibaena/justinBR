@@ -15,7 +15,7 @@ export default class White extends Component {
 
   render() {
     return (
-        <div className="col-md-12 col-sm-12 white-section" >
+        <div className="col-md-12 col-sm-12 white-section" id="white">
           <h1>White</h1>
         </div>
     );
