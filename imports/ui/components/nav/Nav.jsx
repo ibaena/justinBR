@@ -33,7 +33,18 @@ export default class Nav extends Component {
             'transform': 'rotate(90deg)',
             'transition': 'all .3s ease-in-out'
           });
-
+          $('#menu-btn i').css({
+            'color':'white',
+            'transition':'all .3s ease-in-out'
+          });
+          $('#sidebar-btn i').css({
+            'color':'white',
+            'transition':'all .3s ease-in-out'
+          });
+          $('.branding').css({
+            'color':'white',
+            'transition':'all .3s ease-in-out'
+          });
 
       }else {
         $('.nav-wrapper').css({
@@ -51,7 +62,8 @@ export default class Nav extends Component {
         $('.rotate-menu').css({
           'transform': 'rotate(0deg)',
           'transition': 'all .3s ease-in-out'
-        })
+        });
+
       }
     })
   }

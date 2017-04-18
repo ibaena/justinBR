@@ -35,6 +35,14 @@ export default class Sidebar extends Component {
           'transform': 'rotate(0deg)',
           'transition': 'all .3s ease-in-out'
         });
+        $('#menu-btn i').css({
+          'color':'white',
+          'transition':'all .3s ease-in-out'
+        });
+        $('#sidebar-btn i').css({
+          'color':'white',
+          'transition':'all .3s ease-in-out'
+        });
 
       }
     })
