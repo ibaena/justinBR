@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {TweenMax, Power2, TimelineLite} from "gsap";
 
 import Icons from './Icons.jsx';
 import NavWrapper from './NavWrapper.jsx';
@@ -45,6 +46,9 @@ export default class Nav extends Component {
             'color':'white',
             'transition':'all .3s ease-in-out'
           });
+          setTimeout(function() {
+            TweenMax.staggerTo(".menu-list-item", .2, {opacity:1, top:0}, 0.4);
+          },400)
 
       }else {
         $('.nav-wrapper').css({
@@ -62,6 +66,12 @@ export default class Nav extends Component {
         $('.rotate-menu').css({
           'transform': 'rotate(0deg)',
           'transition': 'all .3s ease-in-out'
+        });
+        $('.menu-list-item').css({
+          'position':'relative',
+          'top':'2em',
+          'opacity':'0',
+          'transition':'all .1s ease-in-out'
         });
 
       }

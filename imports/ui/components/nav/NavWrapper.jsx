@@ -12,13 +12,29 @@ export default class NavWrapper extends Component {
   componentDidMount(){
 
   }
+  menuItems() {
+    return [
+      {_id:1, name:'Home', src:'/'},
+      {_id:2, name:'About', src:'/about'},
+      {_id:3, name:'Contact', src:'/contact'},
+    ]
+  }
+  renderMenu() {
+    return this.menuItems().map((item) => (
+      <li className='menu-list-item' key={item._id}>
+        <a href={item.src} className="menu-link">{item.name}</a>
+      </li>
+    ))
+  }
 
 
   render() {
     return (
         <nav className="nav-wrapper">
           <div className="col-md-12 col-sm-12">
-            NAV
+            <ul className="menu-list">
+              {this.renderMenu()}
+            </ul>
           </div>
         </nav>
     );
