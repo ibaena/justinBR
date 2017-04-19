@@ -12,7 +12,7 @@ export default class Sidebar extends Component {
   }
 
   sideScrollbar(){
-      var sidebarScroll = Scrollbar.init(document.querySelector('.'),{
+      var sidebarScroll = Scrollbar.init(document.querySelector('.no-padding'),{
        'speed': '2.2',
        'overscrollEffect':'bounce',
        'damping':'.05'
@@ -29,7 +29,8 @@ export default class Sidebar extends Component {
         $('.sidebar-section').css({
           'visibility':'visible',
           'transition':'all .3s ease-in-out',
-          'width':'450px'
+          'width':'430px',
+          'background':'black'
         });
         $('.rotate-sidebar').css({
           'transform': 'rotate(90deg)',

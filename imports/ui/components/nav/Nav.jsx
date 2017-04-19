@@ -46,9 +46,9 @@ export default class Nav extends Component {
             'color':'white',
             'transition':'all .3s ease-in-out'
           });
-          setTimeout(function() {
-            TweenMax.staggerTo(".menu-list-item", .2, {opacity:1, top:0}, 0.4);
-          },400)
+            setTimeout(function() {
+              TweenMax.staggerTo(".menu-list-item", .3, {opacity:1, top:0, ease: Quart.easeInOut}, 0.4);
+            }, 500);
 
       }else {
         $('.nav-wrapper').css({
@@ -71,7 +71,6 @@ export default class Nav extends Component {
           'position':'relative',
           'top':'2em',
           'opacity':'0',
-          'transition':'all .1s ease-in-out'
         });
 
       }

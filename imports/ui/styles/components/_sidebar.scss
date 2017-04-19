@@ -4,12 +4,13 @@
 .sidebar-section {
     height: 100vh;
     position: fixed;
-    right: 0;
+    right: 2em;
     z-index: 1;
     transition: all 0.4s ease-in-out;
     padding: 0;
     width: 0;
     visibility: hidden;
+    box-shadow: 0px 0px 40px 6px rgba(12, 12, 12, 0.55);
 
     .no-padding {
         padding: 0;
@@ -26,12 +27,13 @@
     .media-item:first-child {
         background: black;
         color: white;
+        height: 150px;
     }
 }
 
 .sidebar-header {
     position: absolute;
-    bottom: 2em;
+    bottom: 1em;
     font-weight: 200;
     left: 50%;
     transform: translateX(-50%);

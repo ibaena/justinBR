@@ -10,7 +10,11 @@ export default class Icons extends Component {
 
   }
   componentDidMount(){
+    $('#btm-left-video i ').on('click', function() {
+      $('#home-video')[0].muted ^= 1;  // Toggle mute 1/0
+      $(this).toggleClass('mute unmute');
 
+    })
   }
 
 
@@ -23,10 +27,10 @@ export default class Icons extends Component {
       </div>
       <div className="nav-items">
         <div id="menu-btn">
-          <i className="fa fa-superpowers rotate-menu" aria-hidden="true"></i>
+          <i className="fa fa-ticket rotate-menu" aria-hidden="true"></i>
         </div>
         <div id="sidebar-btn">
-          <i className="fa fa-xing rotate-sidebar" aria-hidden="true"></i>
+          <i className="fa fa-film rotate-sidebar" aria-hidden="true"></i>
         </div>
       </div>
         <div id="btm-left-video" className="fade-out">

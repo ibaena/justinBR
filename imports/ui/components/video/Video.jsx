@@ -107,6 +107,14 @@ export default class Video extends Component {
       $('#home-video').get(0).play()
     }, 300)
 
+      setTimeout(function() {
+        $('.video-overlay').css({
+          'background': 'rgba(0, 0, 0, .2)',
+          'transition':'all 2s ease-in-out'
+        })
+      },3000);
+
+
 }
 
 
