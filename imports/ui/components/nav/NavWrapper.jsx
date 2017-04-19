@@ -10,7 +10,9 @@ export default class NavWrapper extends Component {
 
   }
   componentDidMount(){
-
+    let d = new Date();
+    let currYear = d.getFullYear();
+    $('#year').html(currYear);
   }
   menuItems() {
     return [
@@ -35,6 +37,9 @@ export default class NavWrapper extends Component {
             <ul className="menu-list">
               {this.renderMenu()}
             </ul>
+          </div>
+          <div id="copyright">
+            <p>© Copyright <span id="year"></span> Justin C Schilling. All Rights Reserved</p>
           </div>
         </nav>
     );
