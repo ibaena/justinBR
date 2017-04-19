@@ -39,7 +39,7 @@ export default class ImageSection extends Component {
         <div className="col-md-12 col-sm-12">
           <h1 className="image-section-title">Featured In.</h1>
         </div>
-          <div className="col-md-12 col-sm-12">
+          <div className="col-md-10 col-md-offset-1 col-sm-12">
             {this.renderFilms()}
           </div>
         </div>
