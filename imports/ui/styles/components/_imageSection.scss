@@ -3,7 +3,7 @@
 *************************/
 .image-section {
     background: #3D72A4;
-    padding: 200px;
+    padding: 150px 200px 0 200px;
 
     .image-section-title {
         color: white;
@@ -21,7 +21,7 @@
     .single-img-wrapper {
         padding: 0 !important;
         margin: 0 !important;
-        height: 600px;
+        height: 500px;
         position: relative;
         background-position: 0 0;
         transition: all 0.3s ease-in-out;
@@ -71,7 +71,7 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(60, 77, 93, 0.33);
             transition: all 0.4s ease-in-out;
             visibility: visible;
             opacity: 1;
