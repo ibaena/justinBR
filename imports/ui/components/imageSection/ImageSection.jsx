@@ -24,7 +24,9 @@ export default class ImageSection extends Component {
       <div className={"col-md-6 col-sm-12 single-img-wrapper " + item.class} key={item._id}>
         <div className="movie-overlay">
           <h1 className="overlay-title">{item.name}</h1>
-          <a href={item.imdb} className="film-links" target="_blank">IMDB This</a>
+          <a href={item.imdb} className="film-links" target="_blank">
+            <i className="fa fa-imdb fa-5x" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
     ))

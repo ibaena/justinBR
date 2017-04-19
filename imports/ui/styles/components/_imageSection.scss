@@ -7,10 +7,11 @@
 
     .image-section-title {
         color: white;
-        font-size: calc(3em + 4px);
+        font-size: calc(5em + 4px);
         font-weight: 200;
         text-align: center;
         padding-bottom: 2em;
+        margin-top: 0;
     }
 
     .film-list {
@@ -30,9 +31,6 @@
             cursor: pointer;
             text-decoration: none;
             cursor: pointer;
-            border: 1px solid white;
-            padding: 8px;
-            width: 200px;
             text-align: center;
             color: white;
             transition: all 0.3s ease-in-out;
@@ -73,7 +71,7 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(255, 255, 255, 0.4);
             transition: all 0.4s ease-in-out;
             visibility: visible;
             opacity: 1;
@@ -83,7 +81,6 @@
     .film-links:hover {
         transition: all 0.3s ease-in-out;
         color: black;
-        background: white;
     }
 
     .single-img-wrapper:first-child {
@@ -116,12 +113,12 @@
     right:3em;
     transition: all .3s ease-in-out;
     opacity: 0;
-    visibility:hidden; 
+    visibility:hidden;
 }
 .even-ani {
     position: relative;
     left:3em;
     transition: all .3s ease-in-out;
     opacity: 0;
-    visibility:hidden; 
+    visibility:hidden;
 }
