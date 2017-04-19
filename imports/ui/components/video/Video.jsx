@@ -5,6 +5,7 @@ import Scrollbar from 'smooth-scrollbar';
 import White from '../section/White.jsx';
 import Black from '../section/Black.jsx';
 import Nav from '../nav/Nav.jsx';
+import ImageSection from '../imageSection/ImageSection.jsx';
 
 
 // TvFrame component
@@ -139,6 +140,7 @@ export default class Video extends Component {
         </div>
 
         <White />
+        <ImageSection />
         <Black />
 
       </div>

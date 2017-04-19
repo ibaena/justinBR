@@ -1,0 +1,99 @@
+/*************************
+    Home Img Section
+*************************/
+.image-section {
+    background: #3D72A4;
+    padding: 200px;
+
+    .film-list {
+        padding: 0;
+    }
+
+    .single-img-wrapper {
+        padding: 0 !important;
+        margin: 0 !important;
+        height: 600px;
+        position: relative;
+
+        .film-links {
+            text-decoration: none;
+            cursor: pointer;
+            text-decoration: none;
+            cursor: pointer;
+            border: 1px solid white;
+            padding: 8px;
+            width: 200px;
+            text-align: center;
+            color: white;
+            transition: all .3s ease-in-out;
+        }
+
+        .movie-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            transition: all 0.4s ease-in-out;
+            visibility: hidden;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .overlay-title {
+                color: white;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .single-img-wrapper:hover {
+        .film-links {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .movie-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            transition: all 0.4s ease-in-out;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .film-links:hover {
+        transition: all .3s ease-in-out;
+        color:black;
+        background: white;
+    }
+
+    .single-img-wrapper:first-child {
+        background-image: url('/images/films/secrets-lg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .single-img-wrapper:nth-child(2) {
+        background-image: url('/images/films/terms-lg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .single-img-wrapper:nth-child(3) {
+        background-image: url('/images/films/gatherer-lg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .single-img-wrapper:nth-child(4) {
+        background-image: url('/images/films/crimes-lg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
