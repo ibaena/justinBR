@@ -48,7 +48,7 @@ export default class Nav extends Component {
           });
             setTimeout(function() {
               TweenMax.staggerTo(".menu-list-item", .3, {opacity:1, top:0, ease: Quart.easeInOut}, 0.4);
-            }, 500);
+            }, 300);
 
       }else {
         $('.nav-wrapper').css({
@@ -67,11 +67,7 @@ export default class Nav extends Component {
           'transform': 'rotate(0deg)',
           'transition': 'all .3s ease-in-out'
         });
-        $('.menu-list-item').css({
-          'position':'relative',
-          'top':'2em',
-          'opacity':'0',
-        });
+        TweenMax.staggerTo(".menu-list-item", .1, {opacity:0, top:'2em', ease: Quart.easeInOut}, 0.1);
 
       }
     })
