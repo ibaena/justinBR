@@ -5,6 +5,14 @@
     background: #3D72A4;
     padding: 200px;
 
+    .image-section-title {
+        color: white;
+        font-size: calc(3em + 4px);
+        font-weight: 200;
+        text-align: center;
+        padding-bottom: 2em;
+    }
+
     .film-list {
         padding: 0;
     }
@@ -14,6 +22,8 @@
         margin: 0 !important;
         height: 600px;
         position: relative;
+        background-position: 0 0;
+        transition: all 0.3s ease-in-out;
 
         .film-links {
             text-decoration: none;
@@ -25,7 +35,7 @@
             width: 200px;
             text-align: center;
             color: white;
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
         }
 
         .movie-overlay {
@@ -51,6 +61,9 @@
     }
 
     .single-img-wrapper:hover {
+        background-position: 0 30%;
+        transition: all 0.3s ease-in-out;
+
         .film-links {
             text-decoration: none;
             cursor: pointer;
@@ -68,8 +81,8 @@
     }
 
     .film-links:hover {
-        transition: all .3s ease-in-out;
-        color:black;
+        transition: all 0.3s ease-in-out;
+        color: black;
         background: white;
     }
 
@@ -96,4 +109,19 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
+}
+
+.odd-ani {
+    position: relative;
+    right:3em;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    visibility:hidden; 
+}
+.even-ani {
+    position: relative;
+    left:3em;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    visibility:hidden; 
 }

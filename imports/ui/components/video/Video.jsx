@@ -26,6 +26,7 @@ export default class Video extends Component {
       let scrollPos = true;
       let whiteSection = scrollbar.isVisible(document.querySelector('.white-section'));
       let blackSection = scrollbar.isVisible(document.querySelector('.black-section'));
+      let imageSection = scrollbar.isVisible(document.querySelector('.image-section'));
 
       let turnBlack = 900;
       let btmNav = 30;
@@ -89,11 +90,24 @@ export default class Video extends Component {
 
       switch(scrollPos) {
         case whiteSection:
-          console.log('White:', whiteSection);
 
         break;
         case blackSection:
-          console.log('Black:', blackSection);
+
+        break;
+        case imageSection:
+          $('.odd-ani').css({
+            'right':'0',
+            'transition':'all .3s ease-in',
+            'opacity':'1',
+            'visibility':'visible'
+          });
+          $('.even-ani').css({
+            'left':'0',
+            'transition':'all .3s ease-in',
+            'opacity':'1',
+            'visibility':'visible'
+          });
 
         break;
 
