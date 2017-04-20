@@ -6,14 +6,21 @@ import NavWrapper from '../../ui/components/nav/NavWrapper.jsx';
 import Nav from '../../ui/components/nav/Nav.jsx';
 import AboutWhite from '../../ui/components/about-section/AboutWhite.jsx';
 import Sidebar from '../../ui/components/sidebar/Sidebar.jsx';
+import Header from '../../ui/components/header/Header.jsx';
 
 export const About = () =>
 
 <div>
-  <div id="about" className="desktop-sites container-fluid"  >
+  <div id="about" className="desktop-sites"  >
     <Nav />
     <NavWrapper />
     <Sidebar />
+    <Header />
+    <div id="b-header">
     <AboutWhite />
+    </div>
+    <div className="gray-bg-container container">
+      <AboutWhite />
+    </div>
   </div>
 </div>

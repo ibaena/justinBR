@@ -2,13 +2,12 @@
     White Section
 *******************/
 #about-white {
-    background: white;
     padding: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: -99;
-    position: absolute;
+    z-index: 1;
+    background: #ececec;
 
     #white-header {
         text-align: center;
