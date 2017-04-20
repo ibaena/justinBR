@@ -71,6 +71,25 @@ export default class Nav extends Component {
 
       }
     })
+    $('.menu-link').on('click', function() {
+      $('.nav-wrapper').css({
+        'width':'0%',
+        'transition':'all .4s ease-in-out',
+        'opacity':'0',
+        'visibility':'hidden'
+      });
+      $('.fade-out').css({
+        'visibility':'visible',
+        'opacity':'1',
+        'transition':'all .3s ease-in-out'
+      });
+      $('#home-page').toggleClass('overflow-hide home-page');
+      $('.rotate-menu').css({
+        'transform': 'rotate(0deg)',
+        'transition': 'all .3s ease-in-out'
+      });
+      TweenMax.staggerTo(".menu-list-item", .1, {opacity:0, top:'2em', ease: Quart.easeInOut}, 0.1);
+    });
   }
 
 

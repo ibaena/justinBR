@@ -14,6 +14,6 @@ export const About = () =>
     <Nav />
     <NavWrapper />
     <Sidebar />
-
+    <AboutWhite />
   </div>
 </div>
