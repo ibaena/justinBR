@@ -10,6 +10,7 @@ export default class Icons extends Component {
 
   }
   componentDidMount(){
+
     $('#btm-left-video i ').on('click', function() {
       $('#home-video')[0].muted ^= 1;  // Toggle mute 1/0
       $(this).toggleClass('mute unmute');

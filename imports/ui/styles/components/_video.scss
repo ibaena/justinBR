@@ -22,10 +22,10 @@
 
 .video-header-text {
     color: white;
-    font-size: calc(8em + 2px);
+    font-size: calc(12em + 2px);
     transition: all 0.3s ease-in-out;
     position: absolute;
-    top: 30%;
+    top: 10%;
     left: 50%;
     transform: scale(1) translate(-50%, -50%);
 }
@@ -60,10 +60,10 @@
     .video-header-text {
         color: white;
         position: absolute;
-        top: 30%;
+        top: 10%;
         left: 50%;
         transform: scale(.8) translate(-50%, -50%);
-        font-size: calc(8em + 2px);
+        font-size: calc(12em + 2px);
         opacity: 0;
         visibility: hidden;
         transition: all 0.2s ease-in-out;
