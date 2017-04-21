@@ -2,13 +2,14 @@
     White Section
 *******************/
 .aboutImage-section {
-    padding: 200px;
+    padding: 100px;
+    padding-top: 100px;
 
     .about-image-title {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: calc(2.8em + 2px);
+        font-size: calc(2.2em + 2px);
         font-weight: 200;
         padding-top: 0%;
     }
@@ -19,7 +20,7 @@
         align-items: center;
         font-size: calc(1em + 4px);
         font-weight: 200;
-        padding-top: 70%;
+        padding-top: 45%;
     }
     .about-image-location {
         display: flex;
@@ -27,6 +28,6 @@
         align-items: center;
         font-size: calc(1em + 6px);
         font-weight: 200;
-        padding-top: 60%;
+        padding-top: 45%;
     }
 }

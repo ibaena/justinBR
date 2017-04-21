@@ -15,10 +15,10 @@ export default class AboutImage extends Component {
   render() {
     return (
         <div className="col-md-12 col-sm-12 aboutImage-section">
-          <div className="col-md-7 col-sm-12">
+          <div className="col-md-6 col-sm-12">
             <img src="/images/profile/profile.png" className="img-responsive center-block" />
           </div>
-          <div className="col-md-5 col-sm-12">
+          <div className="col-md-6 col-sm-12">
             <p className="about-image-title">
               JUSTIN C. SCHILLING
             </p>
