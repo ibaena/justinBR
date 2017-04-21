@@ -5,6 +5,7 @@ import Scrollbar from 'smooth-scrollbar';
 import NavWrapper from '../../ui/components/nav/NavWrapper.jsx';
 import Nav from '../../ui/components/nav/Nav.jsx';
 import AboutWhite from '../../ui/components/about-section/AboutWhite.jsx';
+import AboutImage from '../../ui/components/about-section/AboutImage.jsx';
 import Sidebar from '../../ui/components/sidebar/Sidebar.jsx';
 import Header from '../../ui/components/header/Header.jsx';
 
@@ -20,7 +21,7 @@ export const About = () =>
     <AboutWhite />
     </div>
     <div className="gray-bg-container container">
-      <AboutWhite />
+      <AboutImage />
     </div>
   </div>
 </div>
