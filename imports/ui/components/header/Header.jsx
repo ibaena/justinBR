@@ -14,6 +14,7 @@ export default class Header extends Component {
      'overscrollEffect':'bounce',
      'damping':'.05'
    });
+
   }
 
 
