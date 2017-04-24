@@ -14,12 +14,56 @@ export default class AboutSlider extends Component {
       {_id:1, category:'Film', title:'The Secrets that we Keep', role:'Aaron', director:'Miss Ash Productions', image:''},
       {_id:2, category:'Film', title:'The Florist', role:'Arthur Michaels', director:'Alyssa Greenwald', img:''},
       {_id:3, category:'Film', title:'The Gatherer', role:'Florist', director:'Aurore Duiguo', img:''},
-      {_id:1, category:'Film', title:'The Red Corset', role:'Patrick', director:'Erica Ruez', img:''},
-      {_id:1, category:'Film', title:'Delivery', role:'Imaginary Stevie', director:'Alexandra Hsie', img:''},
-      {_id:1, category:'Film', title:'School\'s Out, Joints Out', role:'Ben the Stoner', director:'Shanan Leeman', img:''},
-      {_id:1, category:'Film', title:'Library of Mabel Jones', role:'Horacio', director:'Max Phillips', img:''},
-      {_id:1, category:'Film', title:'Beard Wars', role:'Chris', director:'David Schoner Jr.', img:''},
+      {_id:4, category:'Film', title:'The Red Corset', role:'Patrick', director:'Erica Ruez', img:''},
+      {_id:5, category:'Film', title:'Delivery', role:'Imaginary Stevie', director:'Alexandra Hsie', img:''},
+      {_id:6, category:'Film', title:'School\'s Out, Joints Out', role:'Ben the Stoner', director:'Shanan Leeman', img:''},
+      {_id:7, category:'Film', title:'Library of Mabel Jones', role:'Horacio', director:'Max Phillips', img:''},
+      {_id:8, category:'Film', title:'Beard Wars', role:'Chris', director:'David Schoner Jr.', img:''},
     ]
+  }
+  theatreList() {
+    return [
+      {_id:1, category:'Theatre', title:'The Maltese Walter', role:'Walter', director:'Greenhouse Ensemble', image:''},
+      {_id:2, category:'Theatre', title:'No Homo', role:'Dave', director:'Fearless Productions', img:''},
+      {_id:3, category:'Theatre', title:'Wrong Stuff', role:'Fred', director:'Fearless Productions', img:''},
+      {_id:4, category:'Theatre', title:'Little Foxes', role:'Leo Hubbard', director:'Mikes Hagins', img:''},
+      {_id:5, category:'Theatre', title:'BOYS\' LIFE', role:'Jack', director:'Jeremy Robinson', img:''},
+    ]
+  }
+  webVoiceList() {
+    return [
+      {_id:1, category:'Web', title:'Blue Wall', role:'Detective Bilan', director:'Sovereign Five Features', image:''},
+      {_id:2, category:'Web', title:'Three Days of Glory', role:'AMC', director:'Gray-Wing Entertainmen', img:''},
+      {_id:3, category:'Voice Over', title:'The Bootleggers', role:'Father Baldoni', director:'Pocket Radio Theater', img:''},
+      {_id:4, category:'Voice Over', title:'John Enters Another...', role:'Dispatcher', director:'Radio!- Karl Sparks', img:''},
+    ]
+  }
+  renderFilm() {
+    return this.filmList().map((item) => (
+      <tr className="subtitle" data-swiper-parallax="-200" key={item._id}>
+        <td data-swiper-parallax="-200">{item.title}</td>
+        <td data-swiper-parallax="-200">{item.role}</td>
+        <td data-swiper-parallax="-200">{item.director}</td>
+      </tr>
+    ))
+  }
+  renderTheatre() {
+    return this.theatreList().map((item) => (
+      <tr className="subtitle" data-swiper-parallax="-200" key={item._id}>
+        <td data-swiper-parallax="-200">{item.title}</td>
+        <td data-swiper-parallax="-200">{item.role}</td>
+        <td data-swiper-parallax="-200">{item.director}</td>
+      </tr>
+    ))
+  }
+  renderWebVoice() {
+    return this.webVoiceList().map((item) => (
+      <tr className="subtitle" data-swiper-parallax="-200" key={item._id}>
+        <td data-swiper-parallax="-200">{item.title}</td>
+        <td data-swiper-parallax="-200">{item.role}</td>
+        <td data-swiper-parallax="-200">{item.director}</td>
+      </tr>
+    ))
   }
   componentDidMount(){
     var swiper = new Swiper('.swiper-container', {
@@ -37,29 +81,54 @@ export default class AboutSlider extends Component {
   render() {
     return (
         <div className="col-md-12 col-sm-12 about-slider-section" id="about-slider">
+          <h1 className="ab-head">Credits</h1>
           <div className="swiper-container">
-              <div className="parallax-bg" style={{backgroundImage:'url(images/slider/panoramic.png)'}} data-swiper-parallax="-23%"></div>
+              <div className="parallax-bg" style={{backgroundImage:'url(images/slider/movieSet.png)'}} data-swiper-parallax="-23%"></div>
               <div className="swiper-wrapper">
                   <div className="swiper-slide">
-                      <div className="title" data-swiper-parallax="-100">Slide 1</div>
-                      <div className="subtitle" data-swiper-parallax="-200">Subtitle</div>
-                      <div className="text" data-swiper-parallax="-300">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
-                      </div>
+                      <div className="title" data-swiper-parallax="-100">Films</div>
+                      <table className="info-wrapper">
+                        <thead>
+                          <tr>
+                            <td>TITLE</td>
+                            <td>ROLE</td>
+                            <td>DIRECTOR</td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {this.renderFilm()}
+                        </tbody>
+                      </table>
                   </div>
                   <div className="swiper-slide">
-                      <div className="title" data-swiper-parallax="-100">Slide 2</div>
-                      <div className="subtitle" data-swiper-parallax="-200">Subtitle</div>
-                      <div className="text" data-swiper-parallax="-300">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
-                      </div>
+                      <div className="title" data-swiper-parallax="-100">Theatre</div>
+                      <table className="info-wrapper">
+                        <thead>
+                          <tr>
+                            <td>TITLE</td>
+                            <td>ROLE</td>
+                            <td>DIRECTOR</td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {this.renderTheatre()}
+                        </tbody>
+                      </table>
                   </div>
                   <div className="swiper-slide">
-                      <div className="title" data-swiper-parallax="-100">Slide 3</div>
-                      <div className="subtitle" data-swiper-parallax="-200">Subtitle</div>
-                      <div className="text" data-swiper-parallax="-300">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
-                      </div>
+                      <div className="title" data-swiper-parallax="-100">Web & Voice </div>
+                      <table className="info-wrapper">
+                        <thead>
+                          <tr>
+                            <td>TITLE</td>
+                            <td>ROLE</td>
+                            <td>DIRECTOR</td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {this.renderWebVoice()}
+                        </tbody>
+                      </table>
                   </div>
               </div>
               <div className="swiper-pagination swiper-pagination-white"></div>

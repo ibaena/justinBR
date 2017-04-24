@@ -33,7 +33,7 @@
             font-weight: 200;
             opacity: 0;
             visibility: hidden;
-            transition: all .2s ease-in-out;
+            transition: all 0.2s ease-in-out;
         }
     }
 
@@ -56,9 +56,9 @@
                 font-size: 3em;
                 text-align: center;
                 font-weight: 200;
-                opacity:1;
+                opacity: 1;
                 visibility: visible;
-                transition: all .4s ease-in-out;
+                transition: all 0.4s ease-in-out;
             }
         }
     }
@@ -101,8 +101,9 @@
 
 .swiper-container {
     width: 100%;
-    height: 600px;
+    height: 700px;
     background: #000;
+    cursor: url("images/icons/abiHover-scroll.png"), auto;
 }
 
 .swiper-slide {
@@ -117,7 +118,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 130%;
+    width: 160%;
     height: 100%;
     -webkit-background-size: cover;
     background-size: cover;
@@ -125,16 +126,45 @@
 }
 
 .swiper-slide .title {
-    font-size: 41px;
+    font-size: calc(2.6em + 4px);
     font-weight: 300;
 }
 
 .swiper-slide .subtitle {
-    font-size: 21px;
+    line-height:3em;
 }
 
 .swiper-slide .text {
     font-size: 14px;
     max-width: 400px;
     line-height: 1.3;
+}
+
+.ab-head {
+    text-align: center;
+    font-size: calc(6em + 2px);
+    font-weight: 200;
+}
+
+.info-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 60px;
+    text-align: center;
+}
+
+thead {
+    tr {
+        font-size: calc(2em + 4px);
+        font-weight: 200;
+         border-bottom: 1px solid white;
+    }
+}
+tbody {
+  tr {
+    td {
+      font-weight: 200;
+      font-size: calc(1.1em + 2px);
+    }
+  }
 }
