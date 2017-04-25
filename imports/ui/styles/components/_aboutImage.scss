@@ -131,7 +131,7 @@
 }
 
 .swiper-slide .subtitle {
-    line-height:3em;
+    line-height: 3em;
 }
 
 .swiper-slide .text {
@@ -157,14 +157,18 @@ thead {
     tr {
         font-size: calc(2em + 4px);
         font-weight: 200;
-         border-bottom: 1px solid white;
+
+        td {
+            border-bottom: 1px solid white;
+        }
     }
 }
+
 tbody {
-  tr {
-    td {
-      font-weight: 200;
-      font-size: calc(1.1em + 2px);
+    tr {
+        td {
+            font-weight: 200;
+            font-size: calc(1.1em + 2px);
+        }
     }
-  }
 }
