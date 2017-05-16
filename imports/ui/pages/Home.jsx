@@ -7,10 +7,6 @@ import Video from '../../ui/components/video/Video.jsx';
 import Sidebar from '../../ui/components/sidebar/Sidebar.jsx';
 
 
-
-
-
-
 export const Home = () =>
 
 

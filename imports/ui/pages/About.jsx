@@ -10,11 +10,13 @@ import AboutImage from '../../ui/components/about-section/AboutImage.jsx';
 import AboutSlider from '../../ui/components/about-section/AboutSlider.jsx';
 import Sidebar from '../../ui/components/sidebar/Sidebar.jsx';
 import Header from '../../ui/components/header/Header.jsx';
+import Black from '../../ui/components/section/Black.jsx';
 
 export const About = () =>
 
 <div>
   <div id="about" className="desktop-sites"  >
+    <div id="nav-over"></div>
     <Nav />
     <NavWrapper />
     <Sidebar />
@@ -27,5 +29,6 @@ export const About = () =>
     </div>
       <AboutSlider />
       <AboutBlack />
+      <Black />
   </div>
 </div>

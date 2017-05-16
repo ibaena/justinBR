@@ -1,6 +1,13 @@
 /******************
     White Section
 *******************/
+#nav-over {
+  position: fixed;
+  top: 0;
+  background: rgba(255,255,255,.3);
+  height: 40px;
+  width: 100%;
+}
 #about-white {
     padding: 200px;
     display: flex;
@@ -12,9 +19,8 @@
     #white-header {
         text-align: center;
         position: relative;
-        bottom: 1.5em;
-        right: 4em;
-        font-size: calc(3.1em + 8px);
+        right: 1em;
+        font-size: calc(4em + 8px);
     }
 
     #white-paragraph {

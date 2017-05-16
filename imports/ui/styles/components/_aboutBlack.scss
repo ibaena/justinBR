@@ -12,8 +12,8 @@
     #black-header {
         text-align: center;
         position: relative;
-        bottom: 1.5em;
-        right: 4em;
+        bottom: 4em;
+        right: 1em;
         font-size: calc(3.1em + 8px);
     }
 
@@ -26,10 +26,11 @@
         line-height: 1.5em;
     }
 }
-.skill-list {
-  list-style-type: none;
 
-  .skill-list-item {
-    
-  }
+.skill-list {
+    list-style-type: none;
+
+    .skill-list-item {
+      padding: 8px;
+    }
 }
